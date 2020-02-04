@@ -1,0 +1,34 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Skewers list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Calories</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for skewer in skewers %}
+            <tr>
+                <td><a href="{{ path('skewer_show', { 'id': skewer.id }) }}">{{ skewer.id }}</a></td>
+                <td>{{ skewer.name }}</td>
+                <td>{{ skewer.calories }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('skewer_show', { 'id': skewer.id }) }}">show</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    
+{% endblock %}

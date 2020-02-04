@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Skewer</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ skewer.id }}</td>
+            </tr>
+            <tr>
+                <th>Name</th>
+                <td>{{ skewer.name }}</td>
+            </tr>
+            <tr>
+                <th>Calories</th>
+                <td>{{ skewer.calories }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('skewer_index') }}">Back to the list</a>
+        </li>
+    </ul>
+{% endblock %}
