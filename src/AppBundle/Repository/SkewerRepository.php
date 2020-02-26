@@ -10,8 +10,15 @@ namespace AppBundle\Repository;
  */
 class SkewerRepository extends \Doctrine\ORM\EntityRepository
 {
-    public function findAllOrder(){        
-        return $this->getEntityManager()->createQuery(
-                "SELECT FROM AppBundle:Skewer ORDER BY DESC")->getResult();
-    }
+    public function findAll() 
+  { 
+    return $this->getEntityManager() 
+      ->createQuery( 
+        "SELECT skewer FROM AppBundle:Skewer skewer" 
+                                    
+      ) 
+      ->getResult(); 
+  } 
+ 
+
 }

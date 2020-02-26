@@ -3,22 +3,21 @@
 {% block body %}
     <h1>Skewer</h1>
 
-    <table>
-        <tbody>
-            <tr>
-                <th>Id</th>
-                <td>{{ skewer.id }}</td>
-            </tr>
-            <tr>
-                <th>Name</th>
-                <td>{{ skewer.name }}</td>
-            </tr>
-            <tr>
-                <th>Calories</th>
-                <td>{{ skewer.calories }}</td>
-            </tr>
-        </tbody>
-    </table>
+     <table class="table-borderless table-responsive">
+                           <tr scope="row" class="pb-2">
+                               <td ><h6 class="text-muted">Nombre</h6></td>
+                               <td>{{ skewer.name }}</td>
+                           </tr>
+                           <tr scope="row" class="pb-2">
+                               <td><h6 class="text-muted"></h6></td>
+                               <td><img src="{{ skewer.calories }}"></td>
+                           </tr>
+
+                           
+                          
+
+ 
+                       </table>
 
     <ul>
         <li>
